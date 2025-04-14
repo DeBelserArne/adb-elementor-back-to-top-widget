@@ -1,0 +1,90 @@
+.adb-back-to-top {
+    position: fixed !important;
+    z-index: 999;
+    cursor: pointer;
+    padding: 15px;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    transform: none !important;
+}
+
+/* Show button in editor mode */
+.elementor-editor-active .adb-back-to-top.in-editor {
+    display: flex !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* Remove default hover behavior */
+.adb-back-to-top:hover {
+    transform: none;
+}
+
+/* Preserve transform for bottom-center and top-center positions */
+.adb-position-bottom-center,
+.adb-position-top-center {
+    transform: translateX(-50%) !important;
+}
+
+.adb-back-to-top svg {
+    width: 1em;
+    height: 1em;
+}
+
+.adb-back-to-top-text {
+    margin-left: 8px;
+}
+
+/* Percentage styles */
+.adb-scroll-percentage {
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+/* Positions */
+.adb-position-bottom-right {
+    right: 30px !important;
+    bottom: 30px !important;
+    left: auto !important;
+    top: auto !important;
+}
+
+.adb-position-bottom-left {
+    left: 30px !important;
+    bottom: 30px !important;
+    right: auto !important;
+    top: auto !important;
+}
+
+.adb-position-bottom-center {
+    left: 50% !important;
+    bottom: 30px !important;
+    right: auto !important;
+    top: auto !important;
+}
+
+.adb-position-top-right {
+    right: 30px !important;
+    top: 30px !important;
+    left: auto !important;
+    bottom: auto !important;
+}
+
+.adb-position-top-left {
+    left: 30px !important;
+    top: 30px !important;
+    right: auto !important;
+    bottom: auto !important;
+}
+
+.adb-position-top-center {
+    left: 50% !important;
+    top: 30px !important;
+    right: auto !important;
+    bottom: auto !important;
+}
+
+/* Elementor hover animations will be handled by Elementor's CSS */
